@@ -18,6 +18,7 @@ const dataProcessor = new Transform({
     // we get the data as buffer
     const data = JSON.parse(chunk.toString());
     data.id = randomUUID();
+    console.log(data);
     return callback(null, JSON.stringify(data));
   },
 });
